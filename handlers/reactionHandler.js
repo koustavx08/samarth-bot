@@ -1,26 +1,19 @@
-const { Events } = require('discord.js');
-
-const emojiRoleMap = {
-  '💻': 'Frontend Dev',
-  '🧪': 'Backend Dev',
-  '🎨': 'Designer',
-  '🛠️': 'Core Team'
-};
-
-module.exports = {
-  name: Events.MessageReactionAdd,
-  async execute(reaction, user) {
-    if (user.bot) return;
-
-    const emoji = reaction.emoji.name;
-    const roleName = emojiRoleMap[emoji];
-    if (!roleName) return;
-
-    const guild = reaction.message.guild;
-    const member = await guild.members.fetch(user.id);
-    const role = guild.roles.cache.find(r => r.name === roleName);
-    if (!role) return;
-
-    await member.roles.add(role);
-  }
-};
+// Reaction role handler for button-based roles (for ES module import)
+export function handleReactionRoles(client) {
+  client.on('interactionCreate', async interaction => {
+    if (!interaction.isButton()) return;
+    if (interaction.customId === 'role_designer') {
+      const role = interaction.guild.roles.cache.find(r => r.name === 'Designer');
+      if (role) {
+        await interaction.member.roles.add(role);
+        await interaction.reply({ content: 'You have been given the Designer role!', ephemeral: true });
+      }
+    } else if (interaction.customId === 'role_student') {
+      const role = interaction.guild.roles.cache.find(r => r.name === 'Student');
+      if (role) {
+        await interaction.member.roles.add(role);
+        await interaction.reply({ content: 'You have been given the Student role!', ephemeral: true });
+      }
+    }
+  });
+}

@@ -1,35 +1,32 @@
-const { REST, Routes } = require('discord.js');
-const fs = require('fs');
-const path = require('path');
-require('dotenv').config();
+import { REST, Routes } from 'discord.js';
+import fs from 'fs';
+import path from 'path';
+import dotenv from 'dotenv';
+
+dotenv.config();
 
 const commands = [];
-const commandsPath = path.join(__dirname, 'commands');
+const commandsPath = path.join(process.cwd(), 'commands');
 const commandFiles = fs.readdirSync(commandsPath).filter(file => file.endsWith('.js'));
 
-// Dynamically load all commands
 for (const file of commandFiles) {
-  try {
-    const command = require(`./commands/${file}`);
-    if (command.data) {
-      commands.push(command.data.toJSON());
-      console.log(`✅ Loaded command: ${command.data.name}`);
-    } else {
-      console.log(`⚠️  Command file ${file} is missing data property`);
-    }
-  } catch (error) {
-    console.error(`❌ Error loading command ${file}:`, error.message);
+  const command = await import(`./commands/${file}`);
+  if (command.default && command.default.data) {
+    commands.push(command.default.data.toJSON());
+    console.log(`✅ Loaded command: ${command.default.data.name}`);
+  } else {
+    console.warn(`⚠️  Command file ${file} is missing data property`);
   }
 }
 
-const rest = new REST({ version: '10' }).setToken(process.env.DISCORD_TOKEN);
+const rest = new REST({ version: '10' }).setToken(process.env.BOT_TOKEN);
 
 (async () => {
   try {
     console.log('🔁 Registering slash command...');
     await rest.put(
-      Routes.applicationGuildCommands(process.env.CLIENT_ID, process.env.GUILD_ID),
-      { body: commands }
+      Routes.applicationCommands(process.env.CLIENT_ID),
+      { body: commands },
     );
     console.log('✅ Slash command registered!');
   } catch (error) {

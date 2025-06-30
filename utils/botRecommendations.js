@@ -1,10 +1,10 @@
-const { EmbedBuilder, PermissionsBitField } = require('discord.js');
+
+import { EmbedBuilder, PermissionsBitField } from 'discord.js';
 
 /**
  * Bot recommendation utility functions
  */
-class BotRecommendations {
-  
+export class BotRecommendations {
   /**
    * Get the list of recommended bots with their information
    * @returns {Array} Array of bot objects with name, description, invite link, and permissions
@@ -207,6 +207,5 @@ class BotRecommendations {
     const bots = this.getRecommendedBots();
     return [...new Set(bots.map(bot => bot.category))];
   }
-}
 
-module.exports = BotRecommendations;
+}
