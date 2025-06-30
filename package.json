@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "A powerful Discord server management bot designed for tech communities",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "start": "node index.js",
     "dev": "nodemon index.js",
@@ -35,12 +36,15 @@
     "node": ">=18.0.0"
   },
   "dependencies": {
+    "chalk": "^5.4.1",
     "cron": "^4.3.1",
     "discord.js": "^14.21.0",
-    "dotenv": "^17.0.0"
+    "dotenv": "^17.0.0",
+    "dotenv-safe": "^9.1.0",
+    "node-cron": "^4.1.1",
+    "winston": "^3.17.0"
   },
   "devDependencies": {
     "nodemon": "^3.1.10"
-  },
-  "type": "module"
+  }
 }
