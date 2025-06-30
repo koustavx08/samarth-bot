@@ -1,0 +1,24 @@
+{
+  "watch": [
+    "index.js",
+    "commands/",
+    "handlers/",
+    "utils/",
+    ".env"
+  ],
+  "ext": "js,json,env",
+  "ignore": [
+    "node_modules/",
+    "logs/",
+    "*.log",
+    "test-deploy.js",
+    "PHASE3_IMPLEMENTATION.md"
+  ],
+  "delay": 1000,
+  "env": {
+    "NODE_ENV": "development"
+  },
+  "verbose": true,
+  "colours": true,
+  "restartable": "rs"
+}

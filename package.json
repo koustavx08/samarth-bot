@@ -1,0 +1,44 @@
+{
+  "name": "samarth-bot",
+  "version": "1.0.0",
+  "description": "A powerful Discord server management bot designed for tech communities",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "deploy": "node deploy-commands.js",
+    "deploy-dev": "nodemon deploy-commands.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "discord",
+    "bot",
+    "discord-bot",
+    "server-management",
+    "community",
+    "tech",
+    "student",
+    "automation",
+    "nodejs"
+  ],
+  "author": "Koustav Singh <koustavsinghcollege@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/koustavx08/samarth-bot.git"
+  },
+  "bugs": {
+    "url": "https://github.com/koustavx08/samarth-bot/issues"
+  },
+  "homepage": "https://github.com/koustavx08/samarth-bot#readme",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "discord.js": "^14.21.0",
+    "dotenv": "^17.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
+}
