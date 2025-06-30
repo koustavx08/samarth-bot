@@ -22,7 +22,7 @@
     "nodejs"
   ],
   "author": "Koustav Singh <koustavsinghcollege@gmail.com>",
-  "license": "MIT",
+  "license": "ISC",
   "repository": {
     "type": "git",
     "url": "https://github.com/koustavx08/samarth-bot.git"

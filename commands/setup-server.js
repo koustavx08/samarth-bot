@@ -1,7 +1,7 @@
-const { SlashCommandBuilder, PermissionsBitField } = require('discord.js');
-const BotRecommendations = require('../utils/botRecommendations');
+import { SlashCommandBuilder, PermissionsBitField } from 'discord.js';
+import BotRecommendations from '../utils/botRecommendations.js';
 
-module.exports = {
+export default {
   data: new SlashCommandBuilder()
     .setName('setup-server')
     .setDescription('Create the Samarth server layout.')

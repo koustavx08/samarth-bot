@@ -1,6 +1,7 @@
-const { SlashCommandBuilder, EmbedBuilder, MessageFlags } = require('discord.js');
 
-module.exports = {
+import { SlashCommandBuilder, EmbedBuilder } from 'discord.js';
+
+export default {
   data: new SlashCommandBuilder()
     .setName('reaction-roles')
     .setDescription('Post a message for users to select roles via emoji.'),
@@ -9,7 +10,7 @@ module.exports = {
     // Respond immediately to avoid timeout
     await interaction.reply({ 
       content: '🔧 Creating reaction role message...', 
-      flags: MessageFlags.Ephemeral
+      ephemeral: true
     });
 
     const embed = new EmbedBuilder()

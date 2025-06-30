@@ -1,8 +1,9 @@
 <div align="center">
 
+
 # 🤖 Samarth Bot
 
-*A powerful Discord server management bot designed for tech communities*
+*A powerful Discord server management bot built exclusively for the Samarth TMSL community*
 
 [![Discord.js](https://img.shields.io/badge/Discord.js-v14.21.0-blue.svg?logo=discord&logoColor=white)](https://discord.js.org/)
 [![Node.js](https://img.shields.io/badge/Node.js-v18+-green.svg?logo=node.js&logoColor=white)](https://nodejs.org/)
@@ -17,36 +18,45 @@
 
 ## 🌟 Overview
 
-**Samarth Bot** is a comprehensive Discord server management solution built specifically for tech communities, student organizations, and development teams. It automates server setup, manages role assignments, and provides curated bot recommendations to enhance your Discord experience.
+
+**Samarth Bot** is a comprehensive Discord server management solution built **exclusively for the Samarth TMSL community**. It automates server setup, manages role assignments, and provides curated bot recommendations to enhance the experience for Samarth TMSL students, faculty, and tech enthusiasts.
+
 
 ### ✨ Key Highlights
 
-- 🚀 **One-Command Server Setup** - Complete server structure in seconds
-- 🎭 **Interactive Role Management** - Reaction-based role assignment  
-- 🤖 **Smart Bot Recommendations** - Curated list of useful Discord bots
+- 🚀 **One-Command Server Setup** - Complete server structure in seconds, tailored for Samarth TMSL
+- 🎭 **Interactive Role Management** - Reaction-based role assignment for Samarth TMSL roles  
+- 🤖 **Smart Bot Recommendations** - Curated list of useful Discord bots for the Samarth TMSL server
 - 🛠️ **Developer-Friendly** - Hot reload development with nodemon
-- 🎯 **Community-Focused** - Designed for tech communities and study groups
+- 🎯 **Community-Focused** - Designed specifically for the Samarth TMSL student and tech community
 
 ---
 
+
+> **Note:** This bot is intended **only for use within the official Samarth TMSL Discord server**. Features, roles, and recommendations are customized for the needs of Samarth TMSL students, faculty, and community members.
+
 ## 🎯 Features
 
+
 ### 🏗️ **Server Management**
-- **Complete Server Setup** - Creates organized channel structure with categories
-- **Role System** - Predefined roles for different team members and skill levels
+- **Complete Server Setup** - Creates an organized channel structure with categories specific to Samarth TMSL
+- **Role System** - Predefined roles for Samarth TMSL team members, students, and skill levels
 - **Permission Management** - Secure channel access with proper role-based permissions
-- **Voice Channels** - Dedicated spaces for collaboration and gaming
+- **Voice Channels** - Dedicated spaces for collaboration, study, and gaming
+
 
 ### 🎭 **Role Assignment**
-- **Reaction Roles** - Users can self-assign roles via emoji reactions
-- **Skill-Based Roles** - Frontend Dev, Backend Dev, Designer, Student Member
+- **Reaction Roles** - Users can self-assign roles via emoji reactions, mapped to Samarth TMSL roles
+- **Skill-Based Roles** - Frontend Dev, Backend Dev, Designer, Student Member (customized for Samarth TMSL)
 - **Interactive Embeds** - Beautiful, user-friendly role selection interface
 
+
 ### 🤖 **Bot Recommendations**
-- **Curated Bot List** - Hand-picked bots for different purposes
+- **Curated Bot List** - Hand-picked bots for different purposes, relevant to Samarth TMSL
 - **Category Filtering** - Music, Moderation, Gaming, Utility, Fun, Economy
 - **Smart Delivery** - Automatic posting to appropriate channels or DMs
 - **Safety First** - Built-in security tips and permission transparency
+
 
 ### ⚡ **Developer Experience**
 - **Hot Reload** - Instant server restart on file changes
@@ -56,14 +66,17 @@
 
 ---
 
-## 🚀 Installation
+
+## 🚀 Installation (Samarth TMSL Only)
+
 
 ### Prerequisites
 - [Node.js](https://nodejs.org/) v18 or higher
-- [Discord Bot Token](https://discord.com/developers/applications)
+- [Discord Bot Token](https://discord.com/developers/applications) (**for Samarth TMSL server only**)
 - Git (optional)
 
-### Quick Setup
+
+### Quick Setup (For Samarth TMSL Server Admins)
 
 1. **Clone the repository**
    ```bash
@@ -106,10 +119,12 @@
 
 ---
 
-## 🎮 Commands
+
+## 🎮 Commands (Samarth TMSL)
+
 
 ### `/setup-server`
-Creates a complete server structure with roles, channels, and categories.
+Creates a complete server structure with roles, channels, and categories, all tailored for the Samarth TMSL community.
 
 **Features:**
 - 📢 Welcome & Announcements
@@ -121,8 +136,9 @@ Creates a complete server structure with roles, channels, and categories.
 
 **Auto-includes:** Bot recommendations sent to #server-updates or admin DM
 
+
 ### `/reaction-roles`
-Sets up interactive role assignment via emoji reactions.
+Sets up interactive role assignment via emoji reactions for Samarth TMSL roles.
 
 **Available Roles:**
 - 💻 Frontend Dev
@@ -130,8 +146,9 @@ Sets up interactive role assignment via emoji reactions.
 - 🎨 Designer
 - 🎓 Student Member
 
+
 ### `/recommend-bots`
-Displays curated Discord bot recommendations.
+Displays curated Discord bot recommendations for the Samarth TMSL server.
 
 **Options:**
 - `dm:true` - Send via direct message
@@ -145,7 +162,8 @@ Displays curated Discord bot recommendations.
 
 ---
 
-## 🛠️ Development
+
+## 🛠️ Development (For Samarth TMSL Contributors)
 
 ### Development Scripts
 
@@ -157,7 +175,8 @@ Displays curated Discord bot recommendations.
 | `npm run deploy-dev` | Deploy with nodemon |
 | `node dev.js` | Development helper with tips |
 
-### File Structure
+
+### File Structure (Samarth TMSL Customization)
 
 ```
 samarth-bot/
@@ -194,9 +213,10 @@ samarth-bot/
 
 ---
 
-## 📋 Server Structure Preview
 
-When you run `/setup-server`, here's what gets created:
+## 📋 Server Structure Preview (Samarth TMSL)
+
+When you run `/setup-server`, here's what gets created for the Samarth TMSL Discord server:
 
 ```
 📢 Welcome & Announcements
@@ -252,7 +272,8 @@ When you run `/setup-server`, here's what gets created:
 
 ---
 
-## 🔧 Configuration
+
+## 🔧 Configuration (Samarth TMSL)
 
 ### Environment Variables
 
@@ -278,7 +299,8 @@ NODE_ENV=development
 
 ---
 
-## 🐛 Troubleshooting
+
+## 🐛 Troubleshooting (Samarth TMSL)
 
 ### Common Issues
 
@@ -299,7 +321,8 @@ NODE_ENV=development
 
 ---
 
-## 📊 Stats & Info
+
+## 📊 Stats & Info (Samarth TMSL)
 
 - **Language:** JavaScript (Node.js)
 - **Framework:** Discord.js v14
@@ -310,7 +333,8 @@ NODE_ENV=development
 
 ---
 
-## 📞 Support
+
+## 📞 Support (Samarth TMSL)
 
 - 📧 **Issues:** [GitHub Issues](https://github.com/koustavx08/samarth-bot/issues)
 - 💬 **Discussions:** [GitHub Discussions](https://github.com/koustavx08/samarth-bot/discussions)
@@ -326,8 +350,9 @@ This project is licensed under the ISC License - see the [LICENSE](LICENSE) file
 
 <div align="center">
 
-**Built with ❤️ for the developer community**
 
-⭐ **Star this repo if you found it helpful!** ⭐
+**Built with ❤️ for the Samarth TMSL developer community**
+
+⭐ **Star this repo if you found it helpful for Samarth TMSL!** ⭐
 
 </div>

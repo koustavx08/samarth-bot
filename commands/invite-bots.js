@@ -1,6 +1,5 @@
 import { SlashCommandBuilder } from 'discord.js';
-import { BotRecommendations } from '../utils/botRecommendations.js';
-
+import BotRecommendations from '../utils/botRecommendations.js';
 
 export default {
   data: new SlashCommandBuilder()

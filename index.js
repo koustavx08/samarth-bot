@@ -13,6 +13,11 @@ console.log('🚀 Starting Samarth Bot...');
 console.log(`📍 Environment: ${process.env.NODE_ENV || 'production'}`);
 console.log(`📁 Working Directory: ${process.cwd()}`);
 
+if (!process.env.BOT_TOKEN) {
+  console.error('❌ BOT_TOKEN is missing in your environment variables. Please check your .env file.');
+  process.exit(1);
+}
+
 const client = new Client({
   intents: [
     GatewayIntentBits.Guilds,
@@ -31,9 +36,13 @@ for (const file of commandFiles) {
   client.commands.set(command.default.data.name, command.default);
 }
 
+
 // Register event handlers
 handleEvents(client);
 handleReactionRoles(client);
+
+// Schedule daily backup
+scheduleDailyBackup(client);
 
 
 client.on('interactionCreate', async interaction => {

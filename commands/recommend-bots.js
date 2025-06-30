@@ -1,7 +1,8 @@
-const { SlashCommandBuilder } = require('discord.js');
-const BotRecommendations = require('../utils/botRecommendations');
 
-module.exports = {
+import { SlashCommandBuilder } from 'discord.js';
+import BotRecommendations from '../utils/botRecommendations.js';
+
+export default {
   data: new SlashCommandBuilder()
     .setName('recommend-bots')
     .setDescription('Get a list of recommended Discord bots for your server')
